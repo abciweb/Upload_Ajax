@@ -1,5 +1,6 @@
 # Upload_Ajax
 Classe d'upload Ajax, Html5-Jquery
+
 Exemples complets et fonctionnels avec classe php côté serveur.
 
 Upload les fichiers par fragments compilés dans un fichier temporaire quand ils dépassent une valeur paramétrable. 
