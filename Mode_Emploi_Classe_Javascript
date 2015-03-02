@@ -4,8 +4,8 @@ auteur Alain Bontemps ABCIWEB
 Upload de fichiers par fragments (chunk), reprise d'upload, affichage des informations en temps réel et styles événementiels.
 
 Fichiers de test
-- UploadAjaxABCI_Basique.php 
-- UploadAjaxABCI.php
+- UploadAjaxABCI_Exemple_Basique.php 
+- UploadAjaxABCI_Exemples.php
 
 Nécessite 
 - UploadAjaxABCI.js (classe javascript)
@@ -24,9 +24,9 @@ Upload les fichiers par fragments compilés dans un fichier temporaire quand ils
 - Supporte l'upload multiple et surpasse la configuration serveur "max_file_uploads" avec un système de file d'attente (queuing).
 
 - Retour d'informations en temps réel, personnalisable et très souple :
-	a/ Dix informations sont disponibles durant l'upload : nom, taille, vignette de prévisualisation (si 	c'est une image), progression graphique, pourcentage, progression textuelle, sauvegarde partielle 	effectuée, temps passé, temps restant estimé, status (en cours, ok, erreur, arrêt), ainsi que deux 	commandes : arrêter et arrêter-tout, qui permettent l'arrêt optimisé afin de pouvoir effectuer une 	reprise d'upload ultérieure dans les meilleures conditions.
+	a/ Dix informations sont disponibles durant l'upload : nom, taille, vignette de prévisualisation (si c'est une image), progression graphique, pourcentage, progression textuelle, sauvegarde partielle 	effectuée, temps passé, temps restant estimé, status (en cours, ok, erreur, arrêt), ainsi que deux commandes : arrêter et arrêter-tout, qui permettent l'arrêt optimisé afin de pouvoir effectuer une reprise d'upload ultérieure dans les meilleures conditions.
 
-	b/ Dispose de style événementiels qui s'appliquent en fonction des événements suivant : fichiers 	soumis, formulaire envoyé, sauvegarde partielle disponible, fichier en cours d'upload, temps restant 	requis (avant l'affichage du temps restant), upload terminé (quelque soit le résultat), upload terminé 	arrêté, upload terminé partiel,  upload terminé erreur,  upload terminé ok, fin d'upload (tous uploads 	terminés), sauvegarde pour au moins un fichier en fin d'upload, fin de traitement du formulaire (avec 	ou sans fichiers traités).
+	b/ Dispose de style événementiels qui s'appliquent en fonction des événements suivant : fichiers soumis, formulaire envoyé, sauvegarde partielle disponible, fichier en cours d'upload, temps restant requis (avant l'affichage du temps restant), upload terminé (quelque soit le résultat), upload terminé arrêté, upload terminé partiel, upload terminé erreur, upload terminé ok, fin d'upload (tous uploads terminés), sauvegarde pour au moins un fichier en fin d'upload, fin de traitement du formulaire (avec ou sans fichiers traités).
 
 
 ATTENTION !  Pour faire des tests sur un serveur local il est conseillé d'utiliser le paramètre ".config.ajax_delai" avec une valeur assez importante pour espacer l'envoi des requêtes. Je ne pourrai pas être tenu pour responsable si une sollicitation importante du système donne le coup de grâce d'un disque dur en cours d'agonie.
@@ -51,10 +51,10 @@ Pour les reprises d'upload, faire attention de pouvoir récupérer les cookies e
 
 ** Voir notes sur "config.static_id_form" en toute fin de ce document pour modifier ce comportement.
 
-Exemples dans les fichiers joints "UploadAjaxABCI_Basique.php" et "UploadAjaxABCI.php"
+Exemples dans les fichiers joints "UploadAjaxABCI_Exemple_Basique.php" et "UploadAjaxABCI_Exemples.php"
 
 1/ SCRIPT PHP QUI ALIMENTE LE FORMULAIRE
-(fichier exemples : UploadAjaxABCI.php)
+(UploadAjaxABCI_Exemples.php)
 
 - Modifier éventuellement la variable $taille_fragment qui détermine la taille maximale des fragments sauvegardés (dans la mesure où cette valeur n'est pas supérieure à la configuration serveur 'upload_max_filesize').
 
@@ -64,7 +64,7 @@ Dans l'absolu le script peut fonctionner sans variables php transmises dans le f
 
 
 2/ CONFIGURATION de la classe javascript UploadAjaxABCI
-(fichier exemples : UploadAjaxABCI.php)
+(fichier exemples : UploadAjaxABCI_Exemples.php)
 
 var MyUpload = new UploadAjaxABCI('#param1', 'param2', '#param3', false);
 Les deux premiers paramètres sont obligatoires, le troisième est indispensable pour l'affichage des informations d'upload pour chaque fichier.
@@ -163,7 +163,7 @@ Les paramètres ci-dessous peuvent être configurés en complément. Ils sont li
 
 
 3/ FORMULAIRE HTML
-(fichier exemple : UploadAjaxABCI.php)
+(fichier exemples : UploadAjaxABCI_Exemples)
 
 - Le formulaire doit contenir un (ou plusieurs) champ de type file, avec ou sans attribut "multiple". 
 - La classe javascript recherche également deux champs de type input nommés :
@@ -182,7 +182,7 @@ $ma_variable = urldecode($_POST['ma_variable']);
 
 
 4/ CONFIGURATION DE L'AFFICHAGE DES INFORMATIONS HTML
-(fichier exemple : UploadAjaxABCI.php et UploadAjaxABCI_Basique.php)
+(fichier exemple : UploadAjaxABCI_Exemples et UploadAjaxABCI_Exemple_Basique.php)
 
 A1/ Retour d'information générale du formulaire
 .UpAbci_infos_form		→ retour d'information générale de formulaire 
@@ -193,18 +193,18 @@ A2/ Dix informations et deux comportements peuvent être affichées durant le t�
 .UpAbci_arreter_tout		→ stop les téléchargements en cours (comportement onclick)
 En cas d'upload multiple, arrête le téléchargement du fichier en cours et les fichiers suivants (pas d'incidence sur les téléchargements précédents).
 
-.UpAbci_infos_upload 	→ conteneur indispensable pour afficher les informations sur les fichiers
+.UpAbci_infos_upload 		→ conteneur indispensable pour afficher les informations sur les fichiers
 En cas d'upload multiple, ce bloc contenant les informations d'un fichier est dupliqué. En conséquence ne pas utiliser d'id. Idem pour les éléments html contenus qui peuvent utiliser les classes listées ci-dessous pour afficher les informations ou le comportement correspondant. 
 
 .UpAbci_nom 			→ nom
 .UpAbci_taille			→ taille
-.UpAbci_progressionG 	→ progression graphique dans une balise html <progress>	
-.UpAbci_progressionT 	→ progression textuelle 	
-.UpAbci_pourcentage 	→ pourcentage effectué 
+.UpAbci_progressionG 		→ progression graphique dans une balise html <progress>	
+.UpAbci_progressionT 		→ progression textuelle 	
+.UpAbci_pourcentage 		→ pourcentage effectué 
 .UpAbci_sauvegarde 		→ sauvegarde effectuée (0 si upload terminé)
-.UpAbci_temps_passe 	→ temps passé
-.UpAbci_temps_restant	→ temps restant
-.UpAbci_status 		→ status (en cours, ok, arrêt, erreur)
+.UpAbci_temps_passe 		→ temps passé
+.UpAbci_temps_restant		→ temps restant
+.UpAbci_status 			→ status (en cours, ok, arrêt, erreur)
 .UpAbci_arret 			→ arrêt de l'upload du fichier (comportement onclick)
 .UpAbci_apercu_img		→ affiche l'aperçu si c'est une image dans la limite des valeurs 
 				".config.max_weight_apercu" et  ".config.total_max_weight_apercu"
@@ -216,23 +216,23 @@ Vous pouvez écrire des valeurs par défaut dans vos éléments html (ex : 0 Mo)
 - Les valeurs par défaut sont aussi analysées pour déterminer l'éventuel espacement à appliquer entre la valeur numérique et son unité correspondante. Si non renseignée ou si les premiers caractères ne sont pas numériques, l'espacement utilisé est celui de la configuration .info.status.espace ('&nbsp;' par défaut).
 
 
-B/ Règles de styles événementielles    (exemples dans le fichier de test "UploadAjaxABCI.php"). 
-Les règles de styles sont spécifiées (si besoin) avec l'attribut "data-upabcicss-..." dans vos éléments html et seront appliquées en fonction des événements suivants :
+B/ Règles de styles événementielles (exemples dans le fichier de test "UploadAjaxABCI_Exemples.php"). 
+Les règles de styles sont spécifiées (si besoin) avec l'attribut "data-upabcicss-..." dans vos éléments html et seront appliquées en fonction des événements suivants :
 
-- Styles applicables sur tous les blocs contenus dans le conteneur des résultats spécifié en troisième paramètre de l'initialisation de la classe javascript  :
+Styles applicables sur tous les blocs contenus dans le conteneur des résultats spécifié en troisième paramètre de l'initialisation de la classe javascript  :
 - data-upabcicss-submit-file  		→ des fichiers ont été soumis 
-- data-upabcicss-submit		→ le formulaire a été envoyé
+- data-upabcicss-submit			→ le formulaire a été envoyé
 - data-upabcicss-fin-upload		→ fin de traitement de tous les fichiers
-- data-upabcicss-sauvegarde-ft	→ sauvegarde pour au moins un fichier en fin de traitement
-- data-upabcicss-fin-traitement	→ fin de traitement du formulaire avec ou sans fichiers traités
+- data-upabcicss-sauvegarde-ft		→ sauvegarde pour au moins un fichier en fin de traitement
+- data-upabcicss-fin-traitement		→ fin de traitement du formulaire avec ou sans fichiers traités
 
-- Styles applicables sur tous les blocs contenus dans le bloc d'information des fichiers défini avec la classe css ".UpAbci_infos_upload" :
-- data-upabcicss-sauvegarde  	→ sauvegarde partielle disponible (ancienne ou en cours)
-- data-upabcicss-encours  	→ le fichier est en cours d'upload
+Styles applicables sur tous les blocs contenus dans le bloc d'information des fichiers défini avec la classe css ".UpAbci_infos_upload" :
+- data-upabcicss-sauvegarde  		→ sauvegarde partielle disponible (ancienne ou en cours)
+- data-upabcicss-encours  		→ le fichier est en cours d'upload
 - data-upabcicss-temps-restant-requis	→ s'applique après la durée de ".config.temps_restant_requis" 
-- data-upabcicss-result  	→ upload terminé, quelque soit le résultat
-- data-upabcicss-result-arret	→ upload terminé arrêté sur demande utilisateur
-- data-upabcicss-result-ok  	→ upload terminé ok
+- data-upabcicss-result  		→ upload terminé, quelque soit le résultat
+- data-upabcicss-result-arret		→ upload terminé arrêté sur demande utilisateur
+- data-upabcicss-result-ok  		→ upload terminé ok
 - data-upabcicss-result-partiel 	→ upload terminé et sauvegarde existante
 - data-upabcicss-result-erreur  	→ upload terminé erreur
 
@@ -243,11 +243,11 @@ A noter que les styles des éléments contenus dans le bloc conteneur général 
 
 Ordre d'application des styles
 
-Certains styles peuvent entrer en concurrence, ils sont appliqués dans l'ordre des événements suivants : 
+Certains styles peuvent entrer en concurrence, ils sont appliqués dans l'ordre des événements suivants : 
 'submit-file', 'submit', 'sauvegarde', 'encours', 'temps-restant-requis', 'result', 'result-arret', 'result-ok',  'result-partiel', 'result-erreur', 'fin-upload', 'sauvegarde-ft', 'fin-traitement'. 
 
 - L'ordre d'écriture dans le html n'a aucune incidence. 
-- Si des fichiers sont joints dans le formulaire, 'submit-file' est persistant par rapport à 'submit' : le style 'submit-file' est appliqué avant et après le style appliqué par 'submit', excepté si tous les fichiers sont arrêtés manuellement avant l'envoi du formulaire auquel cas il n'est appliqué qu'avant.
+- Si des fichiers sont joints dans le formulaire, 'submit-file' est persistant par rapport à 'submit' : le style 'submit-file' est appliqué avant et après le style appliqué par 'submit', excepté si tous les fichiers sont arrêtés manuellement avant l'envoi du formulaire auquel cas il n'est appliqué qu'avant.
 
 
 
@@ -256,7 +256,7 @@ Certains styles peuvent entrer en concurrence, ils sont appliqués dans l'ordre 
 
 
 5/ CONFIGURATION DU SCRIPT PHP D'UPLOAD 
-(fichier : UploadAjaxABCI_Php_Load.php ou UploadAjaxABCI_Php_Load_Basique.php)
+(fichier : UploadAjaxABCI_Php_Load.php ou UploadAjaxABCI_Php_Load_Basique.php)
 
 Configuration de la classe php "UploadAjaxABCIServeur" 
 
@@ -266,10 +266,10 @@ Seuls les deux premiers paramètres sont indispensables, les autres ont des vale
 
 - $dossier_destination 		→ dossier de destination de l'upload 
 - $dossier_temporaire 		→ dossier temporaire où sont enregistrées les sauvegardes 
-- $cookie_heures			→ la durée de vie du cookie de sauvegarde en heures
-- $cookie_path 			→ le path du cookie envoyé en php. Doit pouvoir être 						     	     récupéré par le script en javascript
-- $adresse_relative			→ adresse relative des dossiers
-- $verif_filesize_sup2Go 		→ mettre si possible à true après avoir lu l'avertissement
+- $cookie_heures		→ la durée de vie du cookie de sauvegarde en heures
+- $cookie_path 			→ le path du cookie envoyé en php. Doit pouvoir être récupéré par le script en javascript
+- $adresse_relative		→ adresse relative des dossiers
+- $verif_filesize_sup2Go 	→ mettre si possible à true après avoir lu l'avertissement
 
 Des exemples sont disponibles dans le fichier  "UploadAjaxABCI_Php_Load.php" et toutes les fonctions disponibles de la classe php sont documentées dans le fichier  "UploadAjaxABCIServeur.php".
 
@@ -289,4 +289,4 @@ Si false, l'identifiant de formulaire n'est pas utilisé pour créer le nom du c
 - La vérification de l'intégrité d'un fichier utilise la fonction php "filesize()" qui peut renvoyer n'importe quoi avec des fichiers de plus de 2Go sur certains serveurs (c.f. doc php). Cette vérification est donc limitée par défaut aux fichiers de moins de 2Go. Si possible affectez la valeur true à la variable "$verif_filesize_sup2Go" (dans l'initialisation de la classe php)  après avoir vérifié le bon comportement de votre serveur.
 
 
-Un fichier nommé "nettoyage_temp.php" (inclus dans le dossier php) contient un exemple de script pour nettoyer les fichiers abandonnés en cours d'upload dans le dossier temporaire. Penser à utiliser ce script (ou équivalent) régulièrement.
+Penser à utiliser périodiquement un script pour nettoyer les fichiers abandonnés en cours d'upload dans le dossier temporaire. Exemple dans "nettoyage_temp.php"
