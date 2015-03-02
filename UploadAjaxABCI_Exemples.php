@@ -582,6 +582,5 @@ Par ailleurs le temps restant est affiché avec "data-upabcicss-temps-restant-re
  </fieldset>
 </form>
 </div>
-<p style="margin-top:3em;"><a href="index.html">Index</a></p>
 </body>
 </html>
