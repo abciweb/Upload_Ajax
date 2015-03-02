@@ -18,9 +18,11 @@ require 'UploadAjaxABCIServeur.php';
 
 // Le nom des répertoires passés en paramètre lors de l'initialisation de la classe doivent être suivis d'un slash '/'
 
+// CHANGER LES NOMS DES DOSSIERS OU CREEZ-LES
 // Chemin du dossier de destination
 $dossier_destination = 'Destination_Upload/';
 
+$dossier_destination2 = 'Destination_Upload2/';
 
 // Chemin du dossier temporaire (qui enregistre les sauvegardes) 
 $dossier_temporaire = 'Upload_Temp/';
@@ -92,8 +94,7 @@ if($fichier_en_cours)
 	{
 		// "getAdresseRelative()" retourne l'adresse relative définie automatiquement par défaut ou celle renseignée dans l'initialisation de la classe php
 		$adresse_relative = $up->getAdresseRelative();
-		// nouveau dossier
-		$dossier_destination2 = '../Destination_Upload2/';
+		
 		// construction de la nouvelle destination du fichier
 		$destination_fichier = $adresse_relative.$dossier_destination2.$nom_fichier_nettoye;
 	}
