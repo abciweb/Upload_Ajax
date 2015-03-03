@@ -160,7 +160,7 @@ var tata = new UploadAjaxABCI('#form_files4',script_php,'#reponse_upload4');
 tata.config.ajax_delai = 750;// en milliseconde, espacement entre deux requêtes ajax
 // Attention il conviendrait de baisser (ou mettre à zéro) les valeurs ci-dessous pour les smartphones.
 tata.config.max_weight_apercu = 8; // en Mo poids maximal de l'image pour la prévisualisation. Si au moins une image dépasse cette valeur aucune vignette ne sera affichée pour préserver la cohérence de l'affichage.
-tata.config.total_max_weight_apercu = 12; // en Mo En cas d'upload multiple poids total maximum de toutes les photos. Au delà les vignettes ne seront pas affichées
+tata.config.total_max_weight_apercu = 14; // en Mo En cas d'upload multiple poids total maximum de toutes les photos. Au delà les vignettes ne seront pas affichées
 
 tata.info.status.encours = 'en cours';
 
