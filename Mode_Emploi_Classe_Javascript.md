@@ -8,7 +8,7 @@ Fichiers de test
 - UploadAjaxABCI_Exemples.php
 
 Nécessite 
-- UploadAjaxABCI.js (classe javascript)
+- UploadAjaxABCI_DEV.js (classe javascript)
 - UploadAjaxABCI_Php_Load.php (ou équivalent, destination de la requête Ajax)
 - UploadAjaxABCIServeur.php (ou équivalent, classe d'upload serveur)
 - Jquery.js
