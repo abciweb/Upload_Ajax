@@ -191,20 +191,16 @@ Retour ajax d'information générale (non spécifique aux fichiers).
 A2/ Dix informations et deux comportements peuvent être affichées durant le téléchargement du ou des fichiers. Les informations s'afficheront, ou les comportements seront initialisés, dans les éléments html de votre choix en utilisant les classes suivantes :
 
 .UpAbci_arreter_tout → stop les téléchargements en cours (comportement onclick).
-
 En cas d'upload multiple, arrête le téléchargement du fichier en cours et les fichiers suivants (pas d'incidence sur les téléchargements précédents).
 
 .UpAbci_infos_upload → conteneur indispensable pour afficher les informations sur les fichiers.
-
 En cas d'upload multiple, ce bloc contenant les informations d'un fichier est dupliqué. En conséquence ne pas utiliser d'id. Idem pour les éléments html contenus qui peuvent utiliser les classes listées ci-dessous pour afficher les informations ou le comportement correspondant. 
 
-.UpAbci_nom → nom
-
-.UpAbci_taille → taille
-
-.UpAbci_progressionG → progression graphique dans une balise html <progress>	
-.UpAbci_progressionT → progression textuelle 	
-.UpAbci_pourcentage → pourcentage effectué 
+- .UpAbci_nom → nom
+- .UpAbci_taille → taille
+- .UpAbci_progressionG → progression graphique dans une balise html <progress>
+.UpAbci_progressionT → progression textuelle
+.UpAbci_pourcentage → pourcentage effectué
 .UpAbci_sauvegarde → sauvegarde effectuée (0 si upload terminé)
 .UpAbci_temps_passe → temps passé
 .UpAbci_temps_restant → temps restant
