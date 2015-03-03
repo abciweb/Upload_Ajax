@@ -76,13 +76,14 @@ Les deux premiers paramètres sont obligatoires, le troisième est indispensable
 
 var up = new UploadAjaxABCI('#form','Php_Upload/UploadAjaxABCI_Php_Load.php','#reponse_upload');
 
-// Autres paramètres complémentaires optionnels  (cf liste ci-dessous : "Options de configuration")
+// Autres paramètres complémentaires optionnels (cf liste ci-dessous : "Options de configuration").
+
 up.config.ajax_delai = 750;
 // …
 
 // Pour terminer, utiliser la fonction Start() pour initialiser le script, DOM chargé :
-$(function(){up.Start()});
 
+$(function(){up.Start()});
 
 
 Options de configuration javascript
