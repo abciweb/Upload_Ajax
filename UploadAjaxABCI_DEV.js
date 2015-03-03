@@ -1080,7 +1080,7 @@ UploadAjaxABCI.prototype.Upload = function(i, start, end)
 			Arret (xhr);
 		}})
 		.done(function(reponse)
-        {	
+        	{	
 			var resultat = reponse.resultat != undefined ? reponse.resultat : null;
 			var erreur_upload = reponse.erreur != undefined ? reponse.erreur : '';
 			var add_ok = reponse.ok != undefined ? reponse.ok : '';
@@ -1194,7 +1194,7 @@ UploadAjaxABCI.prototype.Upload = function(i, start, end)
 			}
 		})
 		.fail(function( xhr, textStatus, errorThrown)
-        {
+        	{
 			if(ft)
 			{
 				if(ft.obj.arret){ft.obj.arret.off("click")}
