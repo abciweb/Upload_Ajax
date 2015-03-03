@@ -1,5 +1,5 @@
 /* --------- 
-UploadAjaxABCI Version 2.4
+UploadAjaxABCI Version 2.4c
 auteur Alain Bontemps ABCIWEB
 ----------- */
 
