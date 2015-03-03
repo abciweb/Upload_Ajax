@@ -185,15 +185,15 @@ $ma_variable = urldecode($_POST['ma_variable']);
 (fichier exemple : UploadAjaxABCI_Exemples et UploadAjaxABCI_Exemple_Basique.php)
 
 A1/ Retour d'information générale du formulaire
-.UpAbci_infos_form		→ retour d'information générale de formulaire 
+.UpAbci_infos_form → retour d'information générale de formulaire 
 Retour ajax d'information générale (non spécifique aux fichiers). 
 
 A2/ Dix informations et deux comportements peuvent être affichées durant le téléchargement du ou des fichiers. Les informations s'afficheront, ou les comportements seront initialisés, dans les éléments html de votre choix en utilisant les classes suivantes :
 
-.UpAbci_arreter_tout		→ stop les téléchargements en cours (comportement onclick)
+.UpAbci_arreter_tout → stop les téléchargements en cours (comportement onclick)
 En cas d'upload multiple, arrête le téléchargement du fichier en cours et les fichiers suivants (pas d'incidence sur les téléchargements précédents).
 
-.UpAbci_infos_upload 		→ conteneur indispensable pour afficher les informations sur les fichiers
+.UpAbci_infos_upload → conteneur indispensable pour afficher les informations sur les fichiers
 En cas d'upload multiple, ce bloc contenant les informations d'un fichier est dupliqué. En conséquence ne pas utiliser d'id. Idem pour les éléments html contenus qui peuvent utiliser les classes listées ci-dessous pour afficher les informations ou le comportement correspondant. 
 
 .UpAbci_nom 			→ nom
