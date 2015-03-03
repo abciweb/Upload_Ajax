@@ -871,8 +871,7 @@ UploadAjaxABCI.prototype.Upload = function(i, start, end)
 	function Arret (xhr)
 	{
 		if(ft)
-		{	
-			// pas de renvoi effectué vers l'erreur ajax si l'annulation a lieu en dehors du transfert, donc on incrémente l'upload
+		{
 			var status = ft.obj.status ? ft.obj.status : $();
 			var qte_s = that.QteSauvegarde(cook_name);
 
@@ -898,12 +897,8 @@ UploadAjaxABCI.prototype.Upload = function(i, start, end)
 				if(ft.obj.status) {ft.obj.status.html(that.info.status.arret)}
 								
 				if(ft.obj.arret){ft.obj.arret.off("click")}
-				
-				that.Upload(++index);
 			}
-			else
-			// durant le transfert des fichiers, renvoi effectué vers l'erreur ajax qui incrémente l'upload
-			if(ft.obj.arret)
+			else if(ft.obj.arret)
 			{
 				ft.obj.arret.off("click").one("click",{infos_html:ft.infos_html, status:status, index:index, qte_save:qte_s},that.ArretFormate).one("click",function()
 				{
