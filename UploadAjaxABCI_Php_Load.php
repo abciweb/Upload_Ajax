@@ -1,4 +1,14 @@
 <?php
+/*UploadAjaxABCI_Php_Load_Basique Version 2.4c
+require 'UploadAjaxABCIServeur.php';
+*/
+// Vous devez vérifier l'existance de ces dossier ou changer ces adresses 
+/*------------------------------------------------------*/
+$dossier_destination = '../Destination_Upload/';
+$dossier_destination2 = '../Destination_Upload2/';
+$dossier_temporaire = '../Upload_Temp/';
+/*------------------------------------------------------*/
+
 session_start();
 //UploadAjaxABCI_Php_Load Version 2.4
 
@@ -9,26 +19,15 @@ header('Content-type: text/html; charset=UTF-8');
 
 /* NOTE : Si vous avez ajouté des champs input dans votre formulaire, utilisez la fonction urldecode() pour récupérer vos variables ex : $ma_variable = urldecode($_POST['ma_variable']) ;*/
 
-
 // Charge la classe php d'upload
 require 'UploadAjaxABCIServeur.php';
 
 
-// PARAMETRAGE DE LA CLASSE PHP D'UPLOAD
+/* PARAMETRAGE DE LA CLASSE PHP D'UPLOAD
 
-// Le nom des répertoires passés en paramètre lors de l'initialisation de la classe doivent être suivis d'un slash '/'
+Le nom des répertoires passés en paramètre lors de l'initialisation de la classe doivent être suivis d'un slash '/'
 
-// CHANGER LES NOMS DES DOSSIERS OU CREEZ-LES
-// Chemin du dossier de destination
-$dossier_destination = 'Destination_Upload/';
-
-$dossier_destination2 = 'Destination_Upload2/';
-
-// Chemin du dossier temporaire (qui enregistre les sauvegardes) 
-$dossier_temporaire = 'Upload_Temp/';
-
-/*
-Configuration de la classe php "UploadAjaxABCIServeur" qui réalise l'upload côté serveur. Les deux premiers arguments sont indispensables, les suivants possèdent des valeurs par défaut
+Les deux premiers arguments sont indispensables, les suivants possèdent des valeurs par défaut.
 
 $up = new UploadAjaxABCIServeur($dossier_destination, $dossier_temporaire, $cookie_heures = 24, $cookie_path = '/', $adresse_relative = null, $verif_filesize_sup2Go = false)
 
