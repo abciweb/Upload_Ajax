@@ -29,7 +29,7 @@ Upload les fichiers par fragments compilés dans un fichier temporaire quand ils
 	b/ Dispose de style événementiels qui s'appliquent en fonction des événements suivant : fichiers soumis, formulaire envoyé, sauvegarde partielle disponible, fichier en cours d'upload, temps restant requis (avant l'affichage du temps restant), upload terminé (quelque soit le résultat), upload terminé arrêté, upload terminé partiel, upload terminé erreur, upload terminé ok, fin d'upload (tous uploads terminés), sauvegarde pour au moins un fichier en fin d'upload, fin de traitement du formulaire (avec ou sans fichiers traités).
 
 
-ATTENTION !  Pour faire des tests sur un serveur local il est conseillé d'utiliser le paramètre ".config.ajax_delai" avec une valeur assez importante pour espacer l'envoi des requêtes. Je ne pourrai pas être tenu pour responsable si une sollicitation importante du système donne le coup de grâce d'un disque dur en cours d'agonie.
+ATTENTION !  Pour faire des tests sur un serveur local il est conseillé d'utiliser le paramètre ".config.ajax_delai" avec une valeur assez importante pour espacer l'envoi des requêtes. Je ne pourrai pas être tenu pour responsable si une sollicitation importante du système donne le coup de grâce d'un disque dur en cours d'agonie.
  
 Testé ok avec Firefox, IE10, Chrome
 
@@ -178,14 +178,11 @@ $ma_variable = urldecode($_POST['ma_variable']);
 
 
 
-
-
-
 4/ CONFIGURATION DE L'AFFICHAGE DES INFORMATIONS HTML
-(fichier exemple : UploadAjaxABCI_Exemples et UploadAjaxABCI_Exemple_Basique.php)
+(fichier exemple : UploadAjaxABCI_Exemples et UploadAjaxABCI_Exemple_Basique.php)
 
 A1/ Retour d'information générale du formulaire
-.UpAbci_infos_form → retour d'information générale de formulaire 
+- .UpAbci_infos_form → retour d'information générale de formulaire 
 Retour ajax d'information générale (non spécifique aux fichiers). 
 
 A2/ Dix informations et deux comportements peuvent être affichées durant le téléchargement du ou des fichiers. Les informations s'afficheront, ou les comportements seront initialisés, dans les éléments html de votre choix en utilisant les classes suivantes :
@@ -247,8 +244,6 @@ Certains styles peuvent entrer en concurrence, ils sont appliqués dans l'ordre 
 
 - L'ordre d'écriture dans le html n'a aucune incidence. 
 - Si des fichiers sont joints dans le formulaire, 'submit-file' est persistant par rapport à 'submit' : le style 'submit-file' est appliqué avant et après le style appliqué par 'submit', excepté si tous les fichiers sont arrêtés manuellement avant l'envoi du formulaire auquel cas il n'est appliqué qu'avant.
-
-
 
 
 
