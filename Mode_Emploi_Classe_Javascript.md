@@ -24,7 +24,7 @@ Upload les fichiers par fragments compilés dans un fichier temporaire quand ils
 - Supporte l'upload multiple et surpasse la configuration serveur "max_file_uploads" avec un système de file d'attente (queuing).
 
 - Retour d'informations en temps réel, personnalisable et très souple :
-	a/ Dix informations sont disponibles durant l'upload : nom, taille, vignette de prévisualisation (si c'est une image), progression graphique, pourcentage, progression textuelle, sauvegarde partielle 	effectuée, temps passé, temps restant estimé, status (en cours, ok, erreur, arrêt), ainsi que deux commandes : arrêter et arrêter-tout, qui permettent l'arrêt optimisé afin de pouvoir effectuer une reprise d'upload ultérieure dans les meilleures conditions.
+	a/ Dix informations sont disponibles durant l'upload : nom, taille, vignette de prévisualisation (si c'est une image), progression graphique, pourcentage, progression textuelle, sauvegarde partielle effectuée, temps passé, temps restant estimé, status (en cours, ok, erreur, arrêt), ainsi que deux commandes : arrêter et arrêter-tout, qui permettent l'arrêt optimisé afin de pouvoir effectuer une reprise d'upload ultérieure dans les meilleures conditions.
 
 	b/ Dispose de style événementiels qui s'appliquent en fonction des événements suivant : fichiers soumis, formulaire envoyé, sauvegarde partielle disponible, fichier en cours d'upload, temps restant requis (avant l'affichage du temps restant), upload terminé (quelque soit le résultat), upload terminé arrêté, upload terminé partiel, upload terminé erreur, upload terminé ok, fin d'upload (tous uploads terminés), sauvegarde pour au moins un fichier en fin d'upload, fin de traitement du formulaire (avec ou sans fichiers traités).
 
