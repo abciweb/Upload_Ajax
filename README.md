@@ -31,5 +31,6 @@ fin d'upload (tous uploads terminés), sauvegarde pour au moins un fichier en fi
 fin de traitement du formulaire (avec ou sans fichiers traités).
 
 Regardez en premier lieu "UploadAjaxABCI_Exemple_Basique.php" et "UploadAjaxABCI_Php_Load_Basique.php" qui suffisent pour une configuration basique.
-Un dossier zip préconfiguré et prêt à l'emploi est disponible ici :
+
+Pour des tests rapides un dossier préconfiguré et prêt à l'emploi est disponible ici :
 http://javascript.developpez.com/telecharger/detail/id/4130/Upload-de-fichiers-par-fragments-chunk-reprise-d-upload-affichage-des-informations-en-temps-reel-et-styles-evenementiels
