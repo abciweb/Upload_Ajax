@@ -3,7 +3,7 @@
 require 'UploadAjaxABCIServeur.php';
 */
 
-// Vous devez vérifier l'existence de ces dossier ou changer ces adresses 
+// Vous devez vérifier l'existence de ces dossiers ou changer ces adresses 
 /*------------------------------------------------------*/
 $dossier_destination = 'Destination_Upload/';
 $dossier_temporaire = 'Upload_Temp/';
