@@ -877,8 +877,6 @@ UploadAjaxABCI.prototype.Upload = function(i, start, end)
 
 			if(ft.arret == 1)
 			{
-				xhr.abort();
-				
 				AfficheInfos(qte_s,'now');
 				// Correction pour AfficheInfos qui affiche le temps restant, on remet les valeurs initiales
 				if(ft.obj.temps_restant) {ft.obj.temps_restant.html(that.obj_ini.html.temps_restant)}
@@ -897,6 +895,8 @@ UploadAjaxABCI.prototype.Upload = function(i, start, end)
 				if(ft.obj.status) {ft.obj.status.html(that.info.status.arret)}
 								
 				if(ft.obj.arret){ft.obj.arret.off("click")}
+				
+				xhr.abort();
 			}
 			else if(ft.obj.arret)
 			{
