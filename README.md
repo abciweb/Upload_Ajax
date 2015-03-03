@@ -30,6 +30,6 @@ upload terminé arrêté, upload terminé partiel, upload terminé erreur, uploa
 fin d'upload (tous uploads terminés), sauvegarde pour au moins un fichier en fin d'upload,
 fin de traitement du formulaire (avec ou sans fichiers traités).
 
-
-Fichiers sources, dossier de test et mode d'emploi en téléchargement.
-Pour faire des tests, décompressez le dossier "Upload-Ajax-ABCI" puis placez-le sur votre serveur et utilisez le fichier d'exemple "UploadAjaxABCI.php" sans modifier l'organisation des dossiers. 
+Regardez en premier lieu "UploadAjaxABCI_Exemple_Basique.php" et "UploadAjaxABCI_Php_Load_Basique.php" qui suffisent pour une configuration basique.
+Un dossier zip préconfiguré et prêt à l'emploi est disponible ici :
+http://javascript.developpez.com/telecharger/detail/id/4130/Upload-de-fichiers-par-fragments-chunk-reprise-d-upload-affichage-des-informations-en-temps-reel-et-styles-evenementiels
