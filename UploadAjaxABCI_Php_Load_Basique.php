@@ -1,5 +1,13 @@
 <?php
-//UploadAjaxABCI_Php_Load_Basique Version 2.4
+/*UploadAjaxABCI_Php_Load_Basique Version 2.4c
+require 'UploadAjaxABCIServeur.php';
+*/
+
+// Vous devez vérifier l'existence de ces dossier ou changer ces adresses 
+/*------------------------------------------------------*/
+$dossier_destination = 'Destination_Upload/';
+$dossier_temporaire = 'Upload_Temp/';
+/*------------------------------------------------------*/
 
 session_start();
 // Voir le fichier "UploadAjaxABCI_Php_Load.php" pour plus d'exemples détaillés.
@@ -9,13 +17,11 @@ ignore_user_abort(true);
 
 header('Content-type: text/html; charset=UTF-8');
 
-
 // Charge la classe php d'upload
 require 'UploadAjaxABCIServeur.php';
 
 //Initialisation de la classe php (dossier de destination, dossier temporaire)
-//CHANGER LES NOMS OU CREER LES DOSSIERS PASSES EN PARAMETRE
-$up = new UploadAjaxABCIServeur('Destination_Upload/', 'Upload_Temp/');
+$up = new UploadAjaxABCIServeur($dossier_destination, $dossier_temporaire);
 
 // getUniqidForm() renvoie l'identifiant de formulaire pour la vérification ci-dessous
 $unidid_form = $up->getUniqidForm();
