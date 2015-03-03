@@ -18,7 +18,7 @@ $_SESSION['UploadAjaxABCI'][$UpAbci_uniqid_form] = 1;
 <meta charset="UTF-8" />
 <title>UploadAjaxABCI : upload de fichiers par fragmentation avec Html5 et Ajax/Jquery/Php</title>
 <script src="jquery.js"></script>
-<script src="UploadAjaxABCI.js"></script>
+<script src="UploadAjaxABCI_DEV.js"></script>
 
 <script type="text/javascript">
 // Initialisation de la classe javascript (identifiant formulaire, destination ajax, identifiant réponse)
