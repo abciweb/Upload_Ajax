@@ -2,11 +2,11 @@
 /*UploadAjaxABCI_Php_Load_Basique Version 2.4c
 require 'UploadAjaxABCIServeur.php';
 */
-// Vous devez vérifier l'existance de ces dossier ou changer ces adresses 
+// Vous devez vérifier l'existence de ces dossier ou changer ces adresses 
 /*------------------------------------------------------*/
-$dossier_destination = '../Destination_Upload/';
-$dossier_destination2 = '../Destination_Upload2/';
-$dossier_temporaire = '../Upload_Temp/';
+$dossier_destination = 'Destination_Upload/';
+$dossier_destination2 = 'Destination_Upload2/';
+$dossier_temporaire = 'Upload_Temp/';
 /*------------------------------------------------------*/
 
 session_start();
