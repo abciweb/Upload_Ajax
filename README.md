@@ -41,9 +41,8 @@ A la racine de ce dossier, créez des dossiers nommés :
 et un fichier nommé 
 - "jquery.js" qui doit contenir jquery (code testé fonctionnel avec jQuery v1.11.2)
 
-Regardez en premier lieu "UploadAjaxABCI_Exemple_Basique.php" et "UploadAjaxABCI_Php_Load_Basique.php" qui constituent un couple fonctionnel pour une configuration basique.
 
-Pour des tests plus rapides un dossier préconfiguré et prêt à l'emploi est disponible ici :
+Pour des tests plus rapides un dossier pré configuré et prêt à l'emploi est disponible ici :
 http://javascript.developpez.com/telecharger/detail/id/4130/Upload-de-fichiers-par-fragments-chunk-reprise-d-upload-affichage-des-informations-en-temps-reel-et-styles-evenementiels
 
 (ce lien inclus également un mode d'emploi pdf plus agréable à lire)
